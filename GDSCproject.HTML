@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>GDSCproject</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #a2d3a2;
+            color: #000;
+            text-align: center;
+        }
+
+        header {
+            background-color: #17da17;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: time;
+            color: #151715;
+            text-align: center;
+        }
+
+        header .bird-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            text-align: right;
+        }
+
+        nav {
+            background-color: #17da17;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+            text-align: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #3c533c;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .welcome, .photos {
+            width: 45%;
+            background-color: #17da17;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .welcome h2, .photos h2 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #004d00;
+            text-align: center;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px;
+            text-align: center;
+            height: 400px;
+            width: 400px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #17da17;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #004d00;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BIRDWATCHING</h1>
+        <img src="C:\Users\hp\Pictures\Screenshots\Screenshot 2024-07-13 203508.png" alt="Bird Icon" class="bird-icon">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Get Started</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Gear</a></li>
+            <li><a href="#">Forum</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="welcome">
+            <h2>Welcome</h2>
+            <p<strong>>Welcome to our fake birdwatching site. If this were a 
+                real site, it would be the ideal place to come to learn more about birdwatching, whether you are a beginner looking 
+                to learn how to get into birding, or an expert wanting to share ideas, tips, and photos with other like-minded people.</p>
+            <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!</p>
+        </section>
+        <section class="photos">
+            <h2>Favourite Photos</h2>
+            <div class="photo-grid">
+                <img src="C:\Users\hp\Pictures\Screenshots\Screenshot 2024-07-13 202007.png" alt="Bird 1">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>This fake website example is CC0 — any part of this code may be reused in any way you wish. Original example written by Chris Mills, 2016.</p>
+        <p><a href="https://game-icons.net/1x1/lorc/dove.html" target="_blank">Dove icon</a> by Lorc.</p>
+    </footer>
+</body>
+</html>
