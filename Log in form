@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form train</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <style>
+       body{
+        background-color: rgb(112, 112, 110);
+        padding: 130px;
+
+       }
+       fieldset{
+            background-color: rgb(221, 166, 78);
+            padding: 80px;
+            margin: 30px;
+            position: relative;
+            border-radius: 20px;
+            border-width: 3px;
+            border-color: rgb(9, 9, 71);
+            top: 10px;
+        }
+        .legend{
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .fname{
+            height: 30px;
+            background-color: rgb(25, 233, 233);
+            margin-left: 100px;
+            padding: 5px;
+            border-radius: 8px;
+            border-color: red;
+            
+            
+        }
+        .lname{
+            height: 30px;
+            background-color: rgb(25, 233, 233);
+            margin-left: 150px;
+            padding: 5px;
+            border-radius: 8px;
+            border-color: red;
+
+        }
+        .password{
+            height: 30px;
+            background-color: rgb(25, 233, 233);
+            margin-left: 200px;
+            padding: 5px;
+            border-radius: 8px;
+            border-color: red;
+
+        }
+        .fname:hover,.lname:hover,.password:hover  ,fieldset:hover{
+            background-color:aquamarine;
+            transition-duration: 1s;
+    
+
+        }
+        .submit{
+            height: 30px;
+            background-color: rgb(25, 233, 233);
+            position: absolute;
+            padding: 5px;
+            border-radius: 8px;
+            right: 20px;
+            bottom: 10px
+            
+        
+        }
+        p{
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+            top: 30px;
+        }
+        fieldset:hover{
+            background-color:rgb(204, 154, 74); 
+        }
+
+
+    </style>
+    <body>
+        <p>Contact me:samuelasmare@gmail.com</p>
+        <fieldset>
+            <p>please fill out this form to continue to the next page.</p>
+            <legend class="legend">Log in form </legend>
+
+        <form action="C:\Users\hp\Desktop\Welcome after Submiting.html">
+
+        <input type="text" placeholder="first name" class="fname" maxlength="6"><br> <br> <br> 
+
+        <input type="text" placeholder="last name" class="lname"> <br> <br> <br>
+
+        <input type="password" placeholder="********" class="password"></Br>
+        <input type="submit" value="Submit here" CLASS="submit">
+        </form>
+        
+    </fieldset>
+        
+    </body>
+</html>
