@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple project</title>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0" >
+    <style>
+      h1{
+        font-style: italic;
+        color: rgb(225, 225, 225);
+      }
+      body{
+        background: local;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfiHT6-LKerOyoajqmqY3eVMLXfHJnbmCtgyC0_ZBwUeKzlD6LeF2hySRQ224in-26gfk&usqp=CAU');
+      }
+      div{
+        border:5px whitesmoke solid;
+        border-radius: 20px;
+        position: relative;
+        width: 500px;
+        height: 400px;
+        background-color:blur;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.4); 
+        backdrop-filter: blur();
+      }
+      .but1{
+        background-color:transparent;
+        position: absolute;
+        left: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        width: 150px;
+        height: 40px;
+        top: 50px;
+        border: 3px solid white;
+        color: aliceblue;
+        
+
+
+
+
+
+      }
+      .but2{
+        background-color:transparent;
+        position: absolute;
+        left: 30px;
+        margin: 40px;
+        border-radius: 10px;
+        width: 150px;
+        height: 40px;
+        top: 80px;
+        border: 3px solid white;
+        color: aliceblue;
+
+        
+
+
+      }
+      .but3{
+        background-color:transparent;
+        position: absolute;
+        left: 40px;
+        margin: 50px;
+        border-radius: 10px;
+        width: 150px;
+        height: 40px;
+        top: 120px;
+        border: 3px solid white;
+        color: aliceblue;
+      }
+      .but1:hover{
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+    </style>
+    
+    
+  </head >
+  <body>
+    
+    <h1>
+      ROCK PAPER SCISSORS
+    </h1>
+    <div>
+      <button class="but1" onclick="func()">ROCK</button><br>
+      <button class="but2" onclick="var rand=Math.random();
+      if(rand>0&&rand<0.3){
+         ourmove='Paper';
+         compmove= 'Paper';
+         result='you won';
+        document.write(result);
+      }
+      else if(rand>0.3&&rand<0.7){
+        var ourmove='Paper';
+        var compmove='Rock';
+        var result='You lose';
+        document.write(result);
+      }
+      else{ 
+        var ourmove='Paper';
+        var compmove='Scissor';
+        var result='tie';
+        document.write(result);
+            }
+            alert(`You chose ${ourmove} and Computer chose ${compmove},So ${result}`);">PAPER</button><br>
+      <button class="but3" onclick="var rand=Math.random();
+      if(rand>0&&rand<0.3){
+         ourmove='Scissor';
+         compmove= 'Scissor';
+         result='you won';
+        document.write(result);
+      }
+      else if(rand>0.3&&rand<0.7){
+        var ourmove='Scissor';
+        var compmove='Rock';
+        var result='You lose';
+        document.write(result);
+      }
+      else{ 
+        var ourmove='Scissor';
+        var compmove='Paper';
+        var result='tie';
+        document.write(result);
+            }
+            alert(`You chose ${ourmove} and Computer chose ${compmove},So ${result}`);">PAPER</button><br>">SCISSORS</button><br>
+
+    </div>
+    <script>
+      function func() {
+      var rand=Math.random();
+      if(rand>0&&rand<0.3){
+         ourmove='rock';
+         compmove= 'rock';
+         result='you won';
+        document.write(result);
+      }
+      else if(rand>0.3&&rand<0.7){
+        var ourmove='ROCK';
+        var compmove='Paper';
+        var result='You lose';
+        document.write(result);
+      }
+      else{ 
+        var ourmove='ROCK';
+        var compmove='Scissor';
+        var result='tie';
+        document.write(result);
+            }
+            alert(`You chose ${ourmove} and Computer chose ${compmove},So ${result}`);
+          }
+         
+    </script>
+    
+  </body>
+</html>
