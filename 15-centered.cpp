@@ -1,4 +1,4 @@
-//Yeah I got it//Yeah I got it, but know noooo//Yeah I got it, but know nowwwwwwwwwwwwwwwooo//Yeah I got it, but know nowwwwwwwwaaaaaaaaaaaaaawwwwwwwooo
+
 #include<iostream>
 using namespace std;
 void mainprinter()
