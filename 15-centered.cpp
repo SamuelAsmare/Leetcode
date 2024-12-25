@@ -1,4 +1,4 @@
-This code is to check whether the given array is 15 - centered or not.
+//This code is to check whether the given array is 15 - centered or not.
 #include<iostream>
 using namespace std;
 void mainprinter()
