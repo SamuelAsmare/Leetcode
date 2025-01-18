@@ -7,11 +7,14 @@ public:
             if(i==j){continue;}
           if((nums[i]+nums[j])==target){sam.push_back(i);
           sam.push_back(j);
-          return sam;
+          break;
           
            }      } }
+           sort(sam.begin(),sam.end());
+           auto makeitunique=unique(sam.begin(),sam.end());
+           sam.erase(makeitunique,sam.end());
           
-         return vector<int>();
+        return sam;
         
     }
 };
