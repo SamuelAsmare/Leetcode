@@ -8,11 +8,11 @@ public:
         count++; flowerbed[0]=1;}                      
     if(flowerbed[size-1]==0  &&  flowerbed[size-2]==0){
         count++; flowerbed[size-1]=1;}
-        
+       
             for(int i=1;i<size-1;i++){
                 if(flowerbed[i]==0&&flowerbed[i+1]==0&&
                 flowerbed[i-1]==0){flowerbed[i]=1;count++; }
 
-}        }    return count>=n;
+}           }  return count>=n;
     }
 };
