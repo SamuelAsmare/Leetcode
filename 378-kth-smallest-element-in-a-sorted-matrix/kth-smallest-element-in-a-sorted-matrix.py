@@ -5,5 +5,5 @@ class Solution:
         for i in range (len(matrix)):
             for j in range(len(matrix)):
                 new.append(matrix[i][j])
-            new.sort()
+        new.sort()
         return new[k-1]
