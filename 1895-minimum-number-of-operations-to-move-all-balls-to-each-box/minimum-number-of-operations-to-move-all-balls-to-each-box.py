@@ -1,9 +1,9 @@
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
-        ans=[]
-        for i in range(len(boxes)):
+        ans,n=[],len(boxes)
+        for i in range(n):
             Sum=0
-            for j in range(len(boxes)):
+            for j in range(n):
                 if(i==j):
                     continue
                 else:
