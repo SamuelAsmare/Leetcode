@@ -1,6 +1,8 @@
 class Solution:
     def reverseDegree(self, s: str) -> int:
-        dic,Sum,init={},0,26
+        dic={}
+        Sum=0
+        init=26
         for i in range(97,123):
             dic[chr(i)]=init
             init-=1
