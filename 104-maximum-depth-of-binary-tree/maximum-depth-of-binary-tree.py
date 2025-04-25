@@ -9,7 +9,5 @@ class Solution:
         def find_max(node):
             if not node : 
                 return 0 
-            left = find_max(node.left) # left node  
-            right = find_max(node.right)  # right node
-            return 1 + max(left,right) 
+            return 1 + max(find_max(node.right),find_max(node.left)) 
         return find_max(root)    
