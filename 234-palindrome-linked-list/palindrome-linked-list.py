@@ -10,12 +10,5 @@ class Solution:
         while curr:
             arr.append(curr.val)
             curr=curr.next
-        left=0
-        right=len(arr)-1
-        while (right>left):
-            if (arr[right]!=arr[left]):
-                return False
-            left+=1
-            right-=1
-        return True
+        return arr==arr[::-1]
         
