@@ -10,8 +10,8 @@ class Solution:
             return []
         que , ans = deque([root]) , []
         while que :
-            level =  [] # i am finding the answer for each level 
-            for _ in range (len(que)):
+            level , n =  [] , len (que) # i am finding the answer for each level 
+            for _ in range (n):
                 currnode = que.popleft() # current node 
                 level.append(currnode.val)
                 if currnode.left :
