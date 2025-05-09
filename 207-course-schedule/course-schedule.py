@@ -2,7 +2,7 @@ class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         graph =[[] for _ in range(numCourses)]
         que , indegree = deque() , [0 for _ in range(numCourses)]
-        ans = []
+        ans = 0
 
         for course , pre in prerequisites:
             graph[pre].append(course) # the list of courses which are the pre courses is pointing
@@ -14,12 +14,12 @@ class Solution:
 
         while que:
             barren = que.popleft()
-            ans.append(barren)
+            ans += 1
             for child in graph[barren]:
                 indegree[child] -= 1
                 if indegree[child] == 0:
                     que.append(child)
-        if len(ans) != numCourses:
+        if ans != numCourses:
             return False
         return True
             
