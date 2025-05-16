@@ -19,8 +19,8 @@ class Solution:
         def paths(root):
             if not root:
                 return 
-            path(root,targetSum)
             paths(root.left)
+            path(root,targetSum)
             paths(root.right)
         paths(root)
         return result
