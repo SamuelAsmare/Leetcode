@@ -11,14 +11,14 @@ class Solution:
         def levelorder(root):
             que , result  = deque([root]) , []
             while que:
-                temp  = [] 
+                maxval = float("-inf")
                 for i in range(len(que)):
                     curr = que.popleft()
-                    temp.append(curr.val)
+                    maxval = max(maxval , curr.val)
                     if curr.left:
                         que.append(curr.left)
                     if curr.right:
                         que.append(curr.right)
-                result . append (max(temp))
+                result . append (maxval)
             return result
         return levelorder(root)
