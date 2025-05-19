@@ -11,12 +11,14 @@ class Solution:
     def isEvenOddTree(self, root: Optional[TreeNode]) -> bool:
         q = deque([root])
         level = 0
-        while q:
-            prev = float('-inf') if level % 2 == 0 else float('inf')
+        while q:  
+            if level % 2 == 0:
+                prev = float('-inf')
+            else:
+                prev = float('inf')
             for _ in range(len(q)):
                 n = q.popleft()
-                if (level % 2 == 0 and (n.val % 2 == 0 or n.val <= prev)) or \
-                   (level % 2 == 1 and (n.val % 2 == 1 or n.val >= prev)):
+                if (level % 2 == 0 and (n.val % 2 == 0 or n.val <= prev)) or (level % 2 == 1 and (n.val % 2 == 1 or n.val >= prev)):
                     return False
                 prev = n.val
                 if n.left:
