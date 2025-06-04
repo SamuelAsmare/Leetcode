@@ -1,12 +1,9 @@
 class Solution:
     def kthDistinct(self, arr: List[str], k: int) -> str:
         fre , i = Counter(arr) , 0
-        if k > len(fre):
-            return ""
-        else :
-            for item in fre:
-                if fre[item] == 1:
-                    i+=1
-                if i == k:
-                    return item
+        for item in fre:
+            if fre[item] == 1:
+                i+=1
+            if i == k:
+                return item
         return ""
