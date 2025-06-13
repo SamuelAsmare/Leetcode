@@ -2,9 +2,7 @@ class Solution:
     def minScore(self, n: int, roads: List[List[int]]) -> int:
         graph=defaultdict(list)
         for i in range(len(roads)):
-            loc1 = roads[i][0]
-            loc2 = roads[i][1]
-            distance = roads[i][2]
+            loc1 , loc2 , distance = roads[i][0] , roads[i][1] , roads[i][2]
             graph[loc1].append([loc2 , distance])
             graph[loc2].append([loc1 , distance])
         visited = set()
