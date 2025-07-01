@@ -1,11 +1,11 @@
 class Solution:
     def possibleStringCount(self, word: str) -> int:
-        stack  , ans = [] , 1
+        end  , ans = "" , 1
         for item in word:
-            if not stack:
-                stack.append(item)
-            elif stack[-1] != item:
-                stack.append(item)
+            if not end:
+                end = item
+            elif end != item:
+                end = item
             else:
                 ans += 1
         return ans
