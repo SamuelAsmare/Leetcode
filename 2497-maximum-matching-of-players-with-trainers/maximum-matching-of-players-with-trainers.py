@@ -2,8 +2,6 @@ class Solution:
     def matchPlayersAndTrainers(self, players: List[int], trainers: List[int]) -> int:
         players.sort()
         trainers.sort()
-        print(players)
-        print(trainers)
         p , t , ans  = 0 , 0 , 0
         while p<len(players) and t<len(trainers):
             if players[p] <= trainers[t]:
