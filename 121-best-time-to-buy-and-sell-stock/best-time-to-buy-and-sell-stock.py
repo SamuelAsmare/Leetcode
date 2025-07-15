@@ -1,10 +1,7 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        maxval=0
-        minval=10000
-        minindex=0
-        maxindex=0
-        maxres=0
+        maxval ,minval , minindex = 0 , float("inf") , 0
+        maxindex = maxres = 0
         for i in range(len(prices)):
             if(prices[i]>maxval):
                 maxval=prices[i]
