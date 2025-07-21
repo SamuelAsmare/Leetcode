@@ -1,6 +1,6 @@
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
-        ans , fre , summ =  [] , Counter(s) , 0
+        res , fre , summ =  [] , Counter(s) , 0
         left , right = 0 , len(s)-1
         for i in range(len(s)):
             fre[s[i]]-=1
@@ -12,8 +12,7 @@ class Solution:
                     exists = True
                     break
             if not exists:
-                    ans.append(i+1-summ)
+                    res.append(i+1-summ)
                     summ+=(i+1-summ)
-        return ans
+        return res
                 
-
