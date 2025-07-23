@@ -4,7 +4,6 @@ class Solution:
         for i in range(len(nums)):
             ans[i] = prefix
             prefix *= nums[i]
-    
         for i in range(len(nums) - 1, -1, -1):
             ans[i] = suffix*ans[i]
             suffix *= nums[i]
