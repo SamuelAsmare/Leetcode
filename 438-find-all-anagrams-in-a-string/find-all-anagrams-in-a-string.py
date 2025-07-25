@@ -14,4 +14,3 @@ class Solution:
                 counts[s[left+k]]+=1
             
         return ans
-
