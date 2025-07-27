@@ -9,7 +9,7 @@ class Solution:
         if not root:
             return []
         def levelorder(root):
-            que , result  = deque([root]) , []
+            que , res  = deque([root]) , []
             while que:
                 right = []
                 for i in range(len(que)):
@@ -19,6 +19,6 @@ class Solution:
                         que.append(curr.left)
                     if curr.right:
                         que.append(curr.right)
-                result . append (right.pop())
-            return result 
+                res . append (right.pop())
+            return res 
         return levelorder(root)
