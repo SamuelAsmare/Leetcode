@@ -1,13 +1,13 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        dic={ "]":"[","}":"{", ")":"("}
+        dictionary={ "]":"[","}":"{", ")":"("}
         stack=[]
         for i, item in enumerate(s):
-            if(item not in dic):
+            if(item not in dictionary):
                 stack.append(item)
             else:
                 if(stack):
-                    if(dic[item]!=stack[-1]):
+                    if(dictionary[item]!=stack[-1]):
                         return False
                     stack.pop()
                 else:
