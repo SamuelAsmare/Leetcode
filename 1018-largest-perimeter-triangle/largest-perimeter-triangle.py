@@ -5,5 +5,4 @@ class Solution:
             mid , right = left + 1 , left + 2
             if nums[right] < nums[mid] + nums[left]:
                 return nums[right] + nums[mid] + nums[left]             
-        print(nums)
         return 0
