@@ -1,6 +1,6 @@
 class Solution:
     def minimumPushes(self, word: str) -> int:
-        number = defaultdict(list)
+        number = defaultdict(int)
         degree= defaultdict(int)
         fre = Counter(word)
         # if there are maximum of 8 elements return the length
@@ -10,8 +10,8 @@ class Solution:
         fre = sorted(fre.items(), key=lambda x: -x[1])
         for i, (item,frequency) in enumerate(fre):
             current_number = (i+2)%8
-            number[current_number].append(item)
-            degree[item] = len(number[current_number])
+            number[current_number]+=1
+            degree[item] = number[current_number]
         ans = 0
         for item in word:
             ans += (degree[item])
