@@ -9,19 +9,17 @@ class Solution:
         result = 0
         def path(root,target):
             nonlocal result
-            if not root:
-                return
-            if (target == root.val):
-                result+=1
-
-            path(root.left , target-root.val) 
+            if not root: return   
+            if root.val == target: result += 1
+            path(root.left , target-root.val)
             path(root.right , target-root.val)
-        def paths(root):
+
+        def inorder(root):
             if not root:
                 return 
-            paths(root.left)
+            inorder(root.left)
             path(root,targetSum)
-            paths(root.right)
-        paths(root)
+            inorder(root.right)
+        inorder(root) # call the traversing function ..
         return result
 
