@@ -8,10 +8,9 @@ class Solution:
             area = (right-left)*width
             ans = max(ans,area)
 
-            if height[left]<height[right]: # shrink
+            if height[left]<height[right]: 
                 left+=1
             else:
                 right-=1
         return ans
             
-
