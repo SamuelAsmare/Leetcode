@@ -14,5 +14,4 @@ class Solution:
         for i in range(n):
             for j in range(n):
                 grid[i][j] = diagonal_elements[i - j].pop(0)
-
         return grid
