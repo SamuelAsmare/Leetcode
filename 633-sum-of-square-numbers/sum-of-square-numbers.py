@@ -9,5 +9,4 @@ class Solution:
             index += 1
             left = index**2
             right = c - left
-
         return False
