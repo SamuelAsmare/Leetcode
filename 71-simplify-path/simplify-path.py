@@ -10,6 +10,6 @@ class Solution:
                     stack.pop()
             else:
                 stack.append(item)
-        return "/" + "/".join(stack)
+        return "/" + ("/".join(stack))
             
        
