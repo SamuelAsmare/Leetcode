@@ -6,10 +6,14 @@ class Solution:
                 s.append(int(x))
             else:
                 b, a = s.pop(), s.pop()
-                if x == "+": s.append(a + b)
-                elif x == "-": s.append(a - b)
-                elif x == "*": s.append(a * b)
-                else: s.append(int(a / b))
+                if x == "+":
+                     s.append(a + b)
+                elif x == "-":
+                     s.append(a - b)
+                elif x == "*":
+                     s.append(a * b)
+                else:
+                     s.append(int(a / b))
         ans = s[-1]
         return ans
 
