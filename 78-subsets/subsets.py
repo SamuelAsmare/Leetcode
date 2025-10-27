@@ -1,20 +1,16 @@
-from typing import List
 class Solution:
-    def subsets(self , nums: List[int]) -> List[List[int]]:
-
-        n  , result = len(nums) , []
-
-        for mask in range(1 << n):
-
-            subset = []
-
-            for j in range(n):
-                
-                if mask & (1 << j):
-
-                    subset.append(nums[j])
-                    
-            result.append(subset)
-        
-        return result
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        temp , ans = []  , []
+        def backtrack(i):
+            if i==len(nums):
+                ans.append(temp.copy())
+                return
+            # pick
+            temp.append(nums[i])
+            backtrack(i+1)
+            temp.pop()
+            # dont pick
+            backtrack(i+1)
+        backtrack(0)
+        return ans
 
