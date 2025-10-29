@@ -10,21 +10,14 @@ class Node:
 from collections import deque
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-        # Breadth first search
         if not root:
-            return
-        que = deque([root])
-        while que:
-            end = que[-1]
-            for _ in range(len(que)):
-                node = que.popleft()
-                if node == end:
-                    node.next = None
-                else:
-                    node.next = que[0]
-                if node.right and node.left:
-                    que.append(node.left)
-                    que.append(node.right)
+            return root
+        if root.left:
+            root.left.next = root.right
+            if root.next:
+                root.right.next = root.next.left
+            self.connect(root.left)
+            self.connect(root.right)
         return root  
         
 
