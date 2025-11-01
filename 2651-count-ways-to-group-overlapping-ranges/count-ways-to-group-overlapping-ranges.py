@@ -1,13 +1,15 @@
 class Solution:
     def countWays(self, ranges: List[List[int]]) -> int:
-        # we have n number of containers with overlapping(possibly) ranges
+        MOD = 10**9 + 7
         ranges.sort()
-        container , ans = ranges[0][1] , 2
-        for start , end in ranges[1:]:
-            if start <= container:
-                container = max(end , container)
-            else:
+        container = ranges[0][1]
+        containers_count = 1   # first container
+        for start, end in ranges[1:]:
+            if start > container:  # new non-overlapping block
+                containers_count += 1
                 container = end
-                ans = (ans*2)%(10**9 + 7)
+            else: 
+                container = max(container, end)
+        ans = pow(2, containers_count, MOD)
         return ans
 
