@@ -1,8 +1,17 @@
 class Solution:
     def hasAlternatingBits(self, n: int) -> bool:
-        binum=bin(n)[2:]
-        n=len(binum)
-        for i in range(n-1):
-            if(binum[i]==binum[i+1]):
+        # the time complexity of log n , and constant space complexity
+        if n == 0:
+            return False
+        prev = 1&n  
+        n>>=1 
+        while n > 0: # every step right shift the number and check the right most bit
+            if not ((prev) ^ (1&n)):
                 return False
+            prev = 1&n
+            n >>= 1
         return True
+            
+
+
+            
