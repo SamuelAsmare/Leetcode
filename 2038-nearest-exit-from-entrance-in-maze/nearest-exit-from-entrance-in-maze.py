@@ -1,21 +1,21 @@
+from collections import deque
+from typing import List
+
 class Solution:
     def nearestExit(self, maze: List[List[str]], entrance: List[int]) -> int:
-        # we are using BFS , left , right , up down
-        row , col = len(maze) , len(maze[0])
+        row, col = len(maze), len(maze[0])
         directions = [(0,-1),(0,1),(-1,0),(1,0)]
-        standy , standx = entrance
-        q = deque([(standy , standx , 0)])
-        visited = set([(standy,standx)])
+        y, x = entrance
+        q = deque([(y, x, 0)])
+        maze[y][x] = "+" 
         while q:
-            r , c , distance = q.popleft()
-            for nr , nc in directions:
-                if not (0 <= nr  + r < row and 0 <= nc + c < col):
-                    if distance != 0:
-                        print((r,c))
-                        return distance
-                else:
-                    if maze[nr+r][nc+c] == "." and (nr+r ,nc+c) not in visited:
-                        q.append((nr+r,nc+c , distance+1))
-                        visited.add((nr+r,nc+c))
+            r, c, dist = q.popleft()
+            for dr, dc in directions:
+                nr, nc = r + dr, c + dc
+                if 0 <= nr < row and 0 <= nc < col and maze[nr][nc] == ".":
+                    if nr == 0 or nc == 0 or nr == row-1 or nc == col-1:
+                        return dist + 1
+                    maze[nr][nc] = "+"  
+                    q.append((nr, nc, dist + 1))
+
         return -1
-            
