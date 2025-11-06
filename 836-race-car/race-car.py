@@ -12,8 +12,4 @@ class Solution:
                 continue
             visited.add((position,speed))
             q.append((steps + 1, position + speed , speed*2))
-            # Reverse move conditions
-            if (speed + position > target and speed > 0) or (position + speed < target and speed < 0):
-                if speed < 0: speed = 1 # second case
-                else : speed = -1 # first case
-            q.append((steps + 1, position , speed))
+            q.append((steps + 1, position ,-1 if speed > 0 else 1))
