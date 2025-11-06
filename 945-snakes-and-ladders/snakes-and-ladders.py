@@ -9,13 +9,12 @@ class Solution:
         # we need the row column version of the square (helper function)
         # we will use BFS since it is a shortest path
         # hash map for the visited cells
-        # what should heper function return
+        # what should heper function return ?
         n = len(board)
         q = deque([(1,0)])
         visited = set([1])
         while q:
             label , distance = q.popleft()
-            
             for i in range(1,7):
                 next_label = label + i
                 row , col = self.helper(next_label,n)
