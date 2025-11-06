@@ -4,7 +4,6 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
         if k == 0:
