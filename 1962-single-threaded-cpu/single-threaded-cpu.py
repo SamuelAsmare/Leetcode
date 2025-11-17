@@ -3,7 +3,6 @@ class Solution:
         for i , item in enumerate(tasks):
             item.append(i)
         tasks.sort(key = lambda x : (x[0],x[1]))
-        time = tasks[0][0]
         heap = []
         i = 0
         time = 0
