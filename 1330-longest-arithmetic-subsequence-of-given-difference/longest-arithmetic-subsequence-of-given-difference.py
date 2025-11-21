@@ -9,5 +9,4 @@ class Solution:
                 ans = max(ans , current)
             else:
                 dic[arr[i]] = 1
-        print(dic)
         return ans
