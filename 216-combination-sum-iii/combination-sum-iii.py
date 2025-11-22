@@ -1,6 +1,5 @@
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-        arr = [1,2,3,4,5,6,7,8,9]
         ans = []
         def backtrack(i,path,target):
             if len(path) > k:
@@ -9,11 +8,11 @@ class Solution:
                 if target == 0:
                     ans.append(path.copy()) 
                 return
-            for j in range(i , 9):
-                path.append(arr[j])
-                backtrack(j + 1 ,path , target - arr[j])
+            for j in range(i , 10):
+                path.append(j)
+                backtrack(j + 1 ,path , target - j)
                 path.pop()
-        backtrack(0 , [] , n)
+        backtrack(1 , [] , n)
         return ans
 
 
