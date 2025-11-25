@@ -4,7 +4,6 @@ public:
         int n = nums.size();
         if (!n) return {-1,-1};
         int left = 0 , right = n-1 , first_occurence;
-    //  first occurance
         while(left < right){
             int mid = left + (right - left)/2;
             if (nums[mid] >= target){
@@ -19,7 +18,6 @@ public:
         else{
             return {-1,-1};
         }
-    //  last occurence
     left = 0 , right = n-1 ;
     while(left < right){
             int mid = left + (right - left + 1)/2;
