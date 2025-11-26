@@ -13,7 +13,6 @@ class Solution:
             return dp[(row, col)]
         for col , item in enumerate(matrix[0]):
             dfs(0,col)
-        print(dp)
         result = float("inf")
         for col , item in enumerate(matrix[0]):
             result = min(result , dp[(0,col)])
