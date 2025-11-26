@@ -11,10 +11,8 @@ class Solution:
                 return dp[(row,col)]
             dp[(row, col)] = matrix[row][col] + min(dfs(row+1 , col-1),dfs(row+1,col) , dfs(row+1,col+1))
             return dp[(row, col)]
-        for col , item in enumerate(matrix[0]):
-            dfs(0,col)
         result = float("inf")
         for col , item in enumerate(matrix[0]):
-            result = min(result , dp[(0,col)])
+            result = min(dfs(0,col),result)
         return result
         
