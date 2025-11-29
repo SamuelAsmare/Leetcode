@@ -7,21 +7,15 @@ class Solution:
             rem = target - nums[i]
             left , right = i + 1, len(nums) - 1
             while(left < right):
-                if(nums[left] + nums[right] == rem):
-                    if abs(nums[left] + nums[right] + nums[i] - target) < distance:
+                if abs(nums[left] + nums[right] + nums[i] - target) < distance:
                         ans = nums[left] + nums[right] + nums[i]
-                        distance = abs(nums[left] + nums[right] + nums[i] - target )
+                        distance = abs(nums[left] + nums[right] + nums[i] - target)
+                if(nums[left] + nums[right] == rem):
                     left += 1
                     right -= 1
                 elif(nums[left] + nums[right] < rem):
-                    if abs(nums[left] + nums[right] + nums[i] - target) < distance:
-                        ans = nums[left] + nums[right] + nums[i]
-                        distance = abs( nums[left] + nums[right] + nums[i] - target )
                     left += 1
                 else:
-                    if abs(nums[left] + nums[right] + nums[i] - target) < distance:
-                        ans = nums[left] + nums[right] + nums[i]
-                        distance = abs(nums[left] + nums[right] + nums[i] - target) 
                     right -= 1
         return ans
 
