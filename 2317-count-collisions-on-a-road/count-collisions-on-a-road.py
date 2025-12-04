@@ -11,7 +11,7 @@ class Solution:
                     stack[-1] = "S"
                     ans += 2
             collides = True
-            while len(stack) >= 2 and  collides :
+            while len(stack) >= 2 and collides :
                 if stack[-1] == "L":
                     if stack[-2] == "R":
                         ans += 2
