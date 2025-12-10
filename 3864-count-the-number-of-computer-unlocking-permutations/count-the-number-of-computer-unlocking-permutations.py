@@ -1,6 +1,9 @@
 class Solution:
     def countPermutations(self, C: List[int]) -> int:
-        if min(C[1:]) <= C[0]: return 0
+        for item in C[1:]:
+            if item <= C[0]:
+                return 0
+
         MOD , ans = 10**9 + 7 , 1
         for i in range(2,len(C)):
             ans = (ans * i)%MOD
