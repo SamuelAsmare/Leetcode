@@ -3,7 +3,6 @@ class Solution:
         indices , ans = defaultdict(list) , 0
         for i , char in enumerate(s):
             indices[char].append(i)
-        print(indices)
         for i in range(len(words)):
             start_index = -1
             for item in words[i]:
