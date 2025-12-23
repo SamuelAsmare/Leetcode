@@ -15,7 +15,6 @@ class Solution:
             pos = bisect_right(starts , end)
             if pos < n:
                 ans = max(ans , val + max_values[pos])
-        print(events  , starts , max_values)
         return ans 
                 
 
