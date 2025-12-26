@@ -1,24 +1,15 @@
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
-        ys , ans , ns ,n = customers.count("Y") , 0 , 0 , len(customers)
-        pen = n
-        for i , state in enumerate(customers):
-            if pen > ys + ns:
-                ans = i
-                pen = ys + ns
-            if state == "Y":
+        ys = customers.count("Y") 
+        ns = 0                      
+        min_penalty = ys           
+        ans = 0
+        for i, state in enumerate(customers):
+            if state == 'Y':
                 ys -= 1
             else:
                 ns += 1
-        if pen > ys + ns :
-           return n    
-        return ans 
-
-
-# [YYNY] = ANS = 0
-# 
-
-
-
-
-
+            if ns + ys < min_penalty:
+                min_penalty = ns + ys
+                ans = i + 1  
+        return ans
