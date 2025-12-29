@@ -1,13 +1,10 @@
-from typing import List
-from collections import defaultdict
-
 class Solution:
     def pyramidTransition(self, bottom: str, allowed: List[str]) -> bool:
         rules = defaultdict(list)
         for a, b, c in allowed:
             rules[(a, b)].append(c)
         memo = {}
-        def dfs(row: str) -> bool:
+        def dfs(row):
             if len(row) == 1:
                 return True
             if row in memo:
