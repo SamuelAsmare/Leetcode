@@ -1,10 +1,14 @@
 class Solution:
     def constructTransformedArray(self, nums: List[int]) -> List[int]:
-        ans , n = [] , len(nums)
+        result , n = nums.copy() , len(nums)
         for i , item in enumerate(nums):
-            if item>0:
-                ans.append(nums[(item+i)%n])
+            if item > 0:
+                new_pos = (i + item)%n
+                result[i] = nums[new_pos]
+            elif item < 0:
+                new_pos = (i + item + n)%n
+                result[i] = nums[new_pos]
             else:
-                print(item)
-                ans.append(nums[(n-abs(item)+i)%n])   
-        return ans
+                result[i] = item
+        return result
+#  1 - 2 + 4
