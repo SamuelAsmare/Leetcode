@@ -8,7 +8,6 @@ class Solution:
     def balanceBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         elements = []
         def inorder(node):
-            nonlocal elements
             if not node:
                 return 
             inorder(node.left)
@@ -24,5 +23,4 @@ class Solution:
             root.left = construct(start , middle - 1)
             root.right = construct(middle + 1 , end)
             return root
-            
         return construct(0 , n-1)
