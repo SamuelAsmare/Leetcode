@@ -23,11 +23,26 @@ class Trie:
                     return ans
                 curr = curr.children[char]
         return ans
+# class Solution:
+#     def longestCommonPrefix(self, strs: List[str]) -> str:
+#         trie = Trie()
+#         for item in strs:
+#             if item == "":
+#                 return ""
+#             trie.insert(item)
+#         return trie.common()
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        trie = Trie()
+        min_len , ans  = len(strs[0]) , ""
         for item in strs:
-            if item == "":
-                return ""
-            trie.insert(item)
-        return trie.common()
+            min_len = min(min_len , len(item))
+        for i in range(min_len):
+            char =  strs[0][i]
+            for item in strs:
+                if item[i] != char:
+                    return ans
+            ans += char
+        return ans
+
+
+
