@@ -1,16 +1,21 @@
 class Solution:
     def getHappyString(self, n: int, k: int) -> str:
-        ans = []
+        count = 0
+        result = ""
+
         def backtrack(path):
+            nonlocal count, result
+
             if len(path) == n:
-                ans.append(path)
+                count += 1
+                if count == k:
+                    result = path
                 return
-            for char in ["a" , "b" , "c"]:
-                if not path or  path[-1] != char:
-                    path = path + char
-                    backtrack(path)
-                    path = path[:-1]
+
+            for char in ["a", "b", "c"]:
+                if not path or path[-1] != char:
+                    backtrack(path + char)
+                    if result:  # stop early if we found kth
+                        return
         backtrack("")
-        if len(ans) >= k:
-            return ans[k-1]
-        return ""
+        return result
