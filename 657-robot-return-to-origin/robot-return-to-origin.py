@@ -1,5 +1,3 @@
 class Solution:
     def judgeCircle(self, moves: str) -> bool:
-        fre = Counter(moves)
-        return fre["L"] == fre["R"] and fre["U"] == fre["D"]
-#  [2 , 0]
+        return moves.count('U')==moves.count('D') and moves.count('L')==moves.count('R')
