@@ -6,6 +6,6 @@ class Solution:
                 nums[idx] = (nums[idx] * vi) % (10**9 + 7)
                 idx += ki
         ans = nums[0]
-        for num in nums[1:]:
-            ans ^= num
+        for i in range(1,len(nums)):
+            ans ^= nums[i]
         return ans 
